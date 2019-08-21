@@ -13,20 +13,39 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Center(
-            child: Material(
-              shape: const BeveledRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-                side: BorderSide(color: Colors.black, width: 4),
-              ),
-              color: Colors.yellow,
-              child: Container(
-                height: 200,
-                width: 200,
+            child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch, // option 1
+          children: <Widget>[
+            Container(
+              width: 100, // option 1
+//              constraints: BoxConstraints.expand(width: 100), // option 2
+              color: Colors.red,
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.green,
+                  ),
+                ],
               ),
             ),
-          ),
-        ),
+            Container(
+              width: 100, // option 1
+//              constraints: BoxConstraints.expand(width: 100), // option 2
+              color: Colors.blue,
+            )
+          ],
+        )),
       ),
     );
   }
