@@ -15,24 +15,15 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: Container(
+              height: 200,
+              width: 200,
               decoration: BoxDecoration(
+                color: Colors.yellow,
                 image: DecorationImage(
                   image: NetworkImage(
                     'https://flutter.io/images/catalog-widget-placeholder.png',
                   ),
-                ),
-              ),
-              child: Container(
-                height: 200,
-                width: 200,
-                foregroundDecoration: BoxDecoration(
-                  backgroundBlendMode: BlendMode.exclusion,
-                  gradient: LinearGradient(
-                    colors: const [
-                      Colors.red,
-                      Colors.blue,
-                    ],
-                  ),
+                  fit: BoxFit.fitWidth,
                 ),
               ),
             ),
