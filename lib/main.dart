@@ -13,39 +13,51 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-            child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.stretch, // option 1
-          children: <Widget>[
-            Container(
-              width: 100, // option 1
-//              constraints: BoxConstraints.expand(width: 100), // option 2
-              color: Colors.red,
-            ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              return Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    width: 100,
-                    height: 100,
-                    color: Colors.yellow,
+                    constraints: BoxConstraints.expand(
+                      width: 100,
+                      height: constraints.maxHeight / 2,
+                    ),
+                    color: Colors.red,
                   ),
                   Container(
-                    width: 100,
-                    height: 100,
-                    color: Colors.green,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          width: 100,
+                          height: 100,
+                          color: Colors.yellow,
+                        ),
+                        Container(
+                          width: 100,
+                          height: 100,
+                          color: Colors.green,
+                        ),
+                      ],
+                    ),
                   ),
+                  Container(
+                    constraints: BoxConstraints.expand(
+                      width: 100,
+                      height: constraints.maxHeight / 2,
+                    ),
+                    color: Colors.blue,
+                    margin: EdgeInsets.only(
+                      top: constraints.maxHeight / 2,
+                    ),
+                  )
                 ],
-              ),
-            ),
-            Container(
-              width: 100, // option 1
-//              constraints: BoxConstraints.expand(width: 100), // option 2
-              color: Colors.blue,
-            )
-          ],
-        )),
+              );
+            },
+          ),
+        ),
       ),
     );
   }
