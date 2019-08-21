@@ -14,17 +14,15 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Center(
-            child: Container(
-              height: 200,
-              width: 200,
-              decoration: BoxDecoration(
-                color: Colors.yellow,
-                image: DecorationImage(
-                  image: NetworkImage(
-                    'https://flutter.io/images/catalog-widget-placeholder.png',
-                  ),
-                  fit: BoxFit.fitWidth,
-                ),
+            child: Material(
+              shape: const BeveledRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                side: BorderSide(color: Colors.black, width: 4),
+              ),
+              color: Colors.yellow,
+              child: Container(
+                height: 200,
+                width: 200,
               ),
             ),
           ),
