@@ -2,6 +2,10 @@
 
 # Mi Card
 
+
+![Mi Card Finish](https://drive.google.com/open?id=1x7iHE6sCw5cqSBQ62kB8XGUQYF-45c7o)
+
+
 ## Our Goal
 
 Now that you've seen how to create a Flutter app entirely from scratch, we're going to go further and learn more about how to design user interfaces for Flutter apps.
@@ -16,7 +20,7 @@ Mi Card is a personal business card. Imagine every time you wanted to give someo
 * What is the difference between hot reload and hot refresh and running an app from cold
 * How to use Containers to lay out your UI
 * How to use Columns and Rows to position your UI elements
-* How to add custom fonts
+* How to add custom fonts (Pacifico, Source Sans Pro)
 * How to add Material icons
 * How to style Text widgets
 * How to read and use Flutter Documentation
